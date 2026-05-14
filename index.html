@@ -1,5 +1,260 @@
-<h1>계산고 p5.js 포트폴리오</h1>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+<title>계산고 p5.js 포트폴리오</title>
 
-<ul>
-  <li><a href="./FACE/">자화상</a></li>
-</ul>
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  width:100vw;
+  height:100vh;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  background:#111315;
+  overflow:hidden;
+
+  font-family:sans-serif;
+}
+
+.ipad{
+  position:relative;
+
+  width:1100px;
+  height:720px;
+
+  background:#000000;
+
+  border-radius:42px;
+
+  border:3px solid #2f3238;
+
+  box-shadow:
+    0 30px 80px rgba(0,0,0,0.6),
+    inset 0 0 0 0px rgba(255,255,255,0.04),
+    0 0 0 1px rgba(255,255,255,0.03);
+}
+
+.screen{
+  position:absolute;
+  inset:32px;
+
+  border-radius:30px;
+  overflow:hidden;
+
+  background:
+    radial-gradient(circle at top left,#343a40 0%,transparent 30%),
+    linear-gradient(135deg,#121417,#1c1f24,#0e1012);
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  color:white;
+}
+
+.screen h1{
+  font-size:72px;
+  font-weight:700;
+  letter-spacing:-2px;
+
+  color:#f5f5f5;
+}
+
+.camera{
+  position:absolute;
+
+  left: 10px;
+  top:50%;
+
+  transform:translateY(-50%);
+
+  width:10px;
+  height:10px;
+
+  border-radius:50%;
+
+  background:#0d0d0d;
+
+  box-shadow:
+    0 0 0 2px rgba(255,255,255,0.03);
+}
+
+.power-btn{
+  position:absolute;
+
+  top:70px;
+  right:1097px;
+
+  width:5px;
+  height:60px;
+
+  border-radius:999px;
+
+  background:#44474d;
+}
+
+.volume-btn{
+  position:absolute;
+
+  top:-8px;
+
+  width:50px;
+  height:5px;
+
+  border-radius:999px;
+
+  background:#44474d;
+}
+
+.volume-up{
+  left:80px;
+}
+
+.volume-down{
+  left:140px;
+}
+
+.usb{
+  position:absolute;
+
+  bottom:-3px;
+  left:50%;
+
+  transform:translateX(-50%);
+
+  width:90px;
+  height:6px;
+
+  border-radius:999px;
+
+  background:#1c1d21;
+}
+
+.speaker{
+  position:absolute;
+
+  bottom:12px;
+
+  width:5px;
+  height:5px;
+
+  border-radius:50%;
+
+  background:#1a1b1f;
+}
+
+.next{
+    position:absolute;
+    
+    bottom:100px;
+    
+    width:50px;
+    height:50px;
+    
+    border-radius:50%;
+    border:none;
+    outline:none;
+    border:2px solid #1d1d1d;
+
+    background:#1d2125;
+}
+
+.material-symbols-outlined{
+    font-size:20px;
+    color:rgb(255, 255, 255);
+}
+
+.font-r-mid{
+    transform:translateX(1px);
+}
+
+.font-l-mid{
+    transform:translateX(3px);
+}
+
+.next_left{
+    right:50px;
+    top: 48%;
+}
+
+.next_right{
+    left:50px;
+    top: 47%;
+}
+
+.next:active{
+    background:#cccccc;
+}
+
+.s1{ left:330px; }
+.s2{ left:343px; }
+.s3{ left:356px; }
+.s4{ left:369px; }
+
+.s5{ right:330px; }
+.s6{ right:343px; }
+.s7{ right:356px; }
+.s8{ right:369px; }
+
+</style>
+</head>
+
+<body>
+
+<div class="ipad">
+
+  <div class="camera"></div>
+
+  <div class="power-btn"></div>
+
+  <div class="volume-btn volume-up"></div>
+  <div class="volume-btn volume-down"></div>
+
+  <div class="screen">
+    <h1>
+      <ul>
+        <li><a href="./FACE/">자화상</a></li>
+      </ul>
+    </h1>
+  </div>
+
+  <button class="next next_left">
+    <span class="font-r-mid material-symbols-outlined">
+        arrow_forward_ios
+    </span>
+  </button>
+
+  <button class="next next_right">
+    <span class="font-l-mid material-symbols-outlined">
+        arrow_back_ios
+    </span>
+  </button>
+
+  <div class="usb"></div>
+
+  <div class="speaker s1"></div>
+  <div class="speaker s2"></div>
+  <div class="speaker s3"></div>
+  <div class="speaker s4"></div>
+
+  <div class="speaker s5"></div>
+  <div class="speaker s6"></div>
+  <div class="speaker s7"></div>
+  <div class="speaker s8"></div>
+
+</div>
+
+</body>
+</html>

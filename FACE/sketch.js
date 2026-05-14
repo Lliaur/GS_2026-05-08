@@ -4,7 +4,7 @@ function setup() {
   cnv.position(
     (windowWidth - width) / 2,
     (windowHeight - height) / 2
-}
+)}
 
 function draw() {
   background(0);
